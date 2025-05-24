@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Money Transfer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="transfer-card">
+            <div class="card-header">
+                <h1><i class="fas fa-money-bill-wave"></i> Global Money Transfer</h1>
+                <p>Send money to your family abroad quickly and securely</p>
+            </div>
+            
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="amount">Amount to Send (USD)</label>
+                    <input type="number" id="amount" placeholder="Enter amount in USD">
+                    <small class="fee-info">Transfer fee: 2%</small>
+                </div>
+                
+                <button id="calculate-btn" class="btn-primary">
+                    <i class="fas fa-calculator"></i> Calculate Transfer
+                </button>
+                
+                <div id="results" class="results-container hidden">
+                    <div class="result-item">
+                        <span>Total Amount with Fees:</span>
+                        <strong id="total-amount">$0.00</strong>
+                    </div>
+                    <div class="result-item">
+                        <span>Recipient Gets:</span>
+                        <strong id="receiving-amount">0 CFA</strong>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button id="proceed-btn" class="btn-success">
+                            <i class="fas fa-check-circle"></i> Proceed with Payment
+                        </button>
+                        <button id="cancel-btn" class="btn-danger">
+                            <i class="fas fa-times-circle"></i> Cancel
+                        </button>
+                    </div>
+                </div>
+                
+                <div id="message" class="message-box hidden"></div>
+            </div>
+            
+            <div class="card-footer">
+                <div class="exchange-rate">
+                    <i class="fas fa-exchange-alt"></i>
+                    Current Exchange Rate: 1 USD = 655 CFA
+                </div>
+                <div class="security-info">
+                    <i class="fas fa-shield-alt"></i> Secure & Encrypted Transfers
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
